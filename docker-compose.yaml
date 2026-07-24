@@ -1,12 +1,11 @@
-#Docker-compose.yml
+version: '3.8'
+
 services:
   strapi:
-    build:
-    context: .
-    dockerfile: Dockerfile
+    # Cambiado a string para solucionar el error de validación
+    build: .
     image: strapi:latest
     restart: unless-stopped
-    env_file: ./.env
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: ${DATABASE_HOST}
@@ -21,9 +20,7 @@ services:
       APP_KEYS: ${APP_KEYS}
       NODE_ENV: production
     volumes:
-      - ./config:/app/config
-      - ./src:/app/src
-      - ./public/uploads:/app/public/uploads
+      - strapi-data:/opt/app/public/uploads
     ports:
       - "1337:1337"
 
