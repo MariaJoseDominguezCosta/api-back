@@ -1,7 +1,9 @@
 #Docker-compose.yml
 services:
   strapi:
-    build: .
+    build:
+    context: .
+    dockerfile: Dockerfile
     image: strapi:latest
     restart: unless-stopped
     env_file: ./.env
