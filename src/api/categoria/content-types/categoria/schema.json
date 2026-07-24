@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "Categoria"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "icono": {
+      "type": "string"
+    },
+    "activo": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
