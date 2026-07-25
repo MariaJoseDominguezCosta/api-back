@@ -10,8 +10,8 @@ const config: Core.Config.Middlewares = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'https://*.tu-dominio-coolify.com'], // Añade el dominio de tu Strapi
-          'media-src': ["'self'", 'data:', 'blob:', 'https://*.tu-dominio-coolify.com'], // Añade el dominio de tu Strapi
+          'img-src': ["'self'", 'data:', 'blob:', 'https://strapi.muebleriasahorramas.com.mx'], // Añade el dominio de tu Strapi
+          'media-src': ["'self'", 'data:', 'blob:', 'https://strapi.muebleriasahorramas.com.mx'], // Añade el dominio de tu Strapi
           upgradeInsecureRequests: null,
         },
       },
