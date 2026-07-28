@@ -26,7 +26,7 @@ const config: Core.Config.Middlewares = [
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
     },
-  }
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
