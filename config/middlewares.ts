@@ -17,16 +17,16 @@ const config: Core.Config.Middlewares = [
       },
     },
   },
-  /* 'strapi::cors', */
-  {
+  'strapi::cors',
+ /*  {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'http://localhost:5173'], // Añade aquí los puertos de tu frontend local
+      origin: ['http://localhost:3000', 'localhost:3000'], // Añade aquí los puertos de tu frontend local
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
     },
-  },
+  }, */
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
