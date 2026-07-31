@@ -2,6 +2,23 @@
  * mueble router
  */
 
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::mueble.mueble');
+export default {
+  routes: [
+    {
+      method: 'GET',
+      path: '/muebles/destacados',
+      handler: 'mueble.findFeatured',
+      config: {
+        auth: false,
+      },
+    },
+    {
+      method: 'GET',
+      path: '/muebles/:slug',
+      handler: 'mueble.findOneBySlug',
+      config: {
+        auth: false,
+      },
+    },
+  ],
+};
